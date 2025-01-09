@@ -6,9 +6,9 @@ cv.imshow('Mountain', img)
 # gray = cv.cvtColor(img, cv.COLOR_BGR2GRAY)
 # cv.imshow('Gray', gray)
 
-# #Blurs a given image
-# blur = cv.GaussianBlur(img, (7,7), cv.BORDER_DEFAULT)
-# cv.imshow('Blur', blur)
+#Blurs a given image
+blur = cv.GaussianBlur(img, (3,3), cv.BORDER_DEFAULT)
+cv.imshow('Blur', blur)
 
 # #Edge cascade, threshold 1 and 2 are for the hysteresis procedure, 1 is lowbound for unsure edges and 2 is for sure edges, blur reducing edges detected
 # canny = cv.Canny(blur, 125, 175)
