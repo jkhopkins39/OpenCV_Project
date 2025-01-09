@@ -19,24 +19,28 @@ cv.imshow('Mountain', img)
 # cv.imshow('Translated', translated)
 
 #Rotates image
-def rotate(img, angle, rotPoint=None):
-    (height, width) = img.shape[:2]
-    if rotPoint is None:
-        rotPoint = (width//2, height//2)
+# def rotate(img, angle, rotPoint=None):
+#     (height, width) = img.shape[:2]
+#     if rotPoint is None:
+#         rotPoint = (width//2, height//2)
 
-    rotMatrix = cv.getRotationMatrix2D(rotPoint, angle, 1.0)
-    dimensions = (width, height)
-    return cv.warpAffine(img, rotMatrix, dimensions)
+#     rotMatrix = cv.getRotationMatrix2D(rotPoint, angle, 1.0)
+#     dimensions = (width, height)
+#     return cv.warpAffine(img, rotMatrix, dimensions)
 
-#rotation can be repeated and done on rotated images however there will be data loss. better to just change angle
-rotated = rotate(img, 45)
-cv.imshow('Rotated', rotated)
+# #rotation can be repeated and done on rotated images however there will be data loss. better to just change angle
+# rotated = rotate(img, 45)
+# cv.imshow('Rotated', rotated)
 
-resized = cv.resize(img, (500,500), interpolation=cv.INTER_AREA)
-cv.imshow('Resized', resized)
+# resized = cv.resize(img, (500,500), interpolation=cv.INTER_AREA)
+# cv.imshow('Resized', resized)
 
-#1 is for across, 0 is for upside down, -1 is both
-flipped = cv.flip(img, 1)
-cv.imshow('Flipped', flipped)
+# #1 is for across, 0 is for upside down, -1 is both
+# flipped = cv.flip(img, 1)
+# cv.imshow('Flipped', flipped)
+
+transposed = cv.transpose(img)
+
+cv.imshow('Transposed', transposed)
 
 cv.waitKey(0)

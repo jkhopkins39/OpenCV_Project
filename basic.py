@@ -27,7 +27,7 @@ cv.imshow('Blur', blur)
 # cv.imshow('Resizing', resized)
 
 #Cropping, this essentially gives you a frame that is the defined coordinates of an image
-cropped = img[50:200, 200:400]
-cv.imshow('Cropped', cropped)
+# cropped = img[50:200, 200:400]
+# cv.imshow('Cropped', cropped)
 
 cv.waitKey(0)
