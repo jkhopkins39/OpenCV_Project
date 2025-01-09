@@ -35,4 +35,8 @@ cv.imshow('Rotated', rotated)
 resized = cv.resize(img, (500,500), interpolation=cv.INTER_AREA)
 cv.imshow('Resized', resized)
 
+#1 is for across, 0 is for upside down, -1 is both
+flipped = cv.flip(img, 1)
+cv.imshow('Flipped', flipped)
+
 cv.waitKey(0)
