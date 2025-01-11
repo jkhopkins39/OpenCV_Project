@@ -3,16 +3,16 @@ img = cv.imread('Photos/Mountain.jpg')
 cv.imshow('Mountain', img)
 
 #Converts to grayscale
-# gray = cv.cvtColor(img, cv.COLOR_BGR2GRAY)
-# cv.imshow('Gray', gray)
+gray = cv.cvtColor(img, cv.COLOR_BGR2GRAY)
+cv.imshow('Gray', gray)
 
 #Blurs a given image
 blur = cv.GaussianBlur(img, (3,3), cv.BORDER_DEFAULT)
 cv.imshow('Blur', blur)
 
-# #Edge cascade, threshold 1 and 2 are for the hysteresis procedure, 1 is lowbound for unsure edges and 2 is for sure edges, blur reducing edges detected
-# canny = cv.Canny(blur, 125, 175)
-# cv.imshow('Cany!', canny)
+#Edge cascade, threshold 1 and 2 are for the hysteresis procedure, 1 is lowbound for unsure edges and 2 is for sure edges, blur reducing edges detected
+canny = cv.Canny(blur, 125, 175)
+cv.imshow('Cany!', canny)
 
 # #Dilates (grows) edges
 # dilated = cv.dilate(canny, (7,7), iterations=3)
